@@ -1,0 +1,72 @@
+*{
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+/* Maneira de aplicar fontes via css */
+
+@font-face {
+    font-family: 'Pixel';
+    src: url(../fonts/Pixel.ttf);
+}
+
+[wm-flappy]{
+    position: relative;
+    border: 5px solid whitesmoke;
+    height: 700px;
+    width: 1200px;
+    margin: 15px;
+    background: url(../imgs/backgroundFlappy.png);
+    overflow: hidden;
+    
+    background-size: cover;
+
+}
+
+.passaro{
+    position: absolute;
+    width: 60px;
+    /* Fica exatamente no meio da tela os menos 30 px sao metade do elemento img que é o passaro, sem o menos 30px o passaro passa exatamente 30px pra direita do centro */
+    left: calc(50% - 30px);
+}
+
+.par-de-barreiras{
+    position: absolute;
+    top: 0;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.barreira{
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+
+}
+
+.barreira .borda{
+    height: 30px;
+    width: 130px;
+    background: linear-gradient(10deg, #639301, #A5E82E);
+    border: 2px solid black;
+}
+
+.barreira .corpo{
+    height: 140px;
+    width: 110px;
+    background: linear-gradient(90deg, #639301, #A5E82E);
+    border-left: 2px solid black;
+    border-right: 2px solid black;
+}
+
+.progresso{
+    position: absolute;
+    top: 10px;
+    right: 10px;
+    font-family: 'Pixel';
+    font-size: 40px;
+    z-index: 10;
+}
